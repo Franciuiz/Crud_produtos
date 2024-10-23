@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+
+  postgres:
+    image: postgres:12-alpine
+    container_name: postgres-12a
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+#      POSTGRES_DB: Crud_produtos
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      PGDATA: /data/postgres
+    volumes:
+      - ./bancoFiles/postgres:/data/postgres
