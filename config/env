@@ -1,0 +1,10 @@
+# local environment variables
+
+# database
+DB_HOSTNAME="localhost"
+DB_PORT="5432"
+
+# postgres
+PG_DATABASE="Crud_produtos"
+PG_USERNAME="postgres"
+PG_PASSWORD="123"

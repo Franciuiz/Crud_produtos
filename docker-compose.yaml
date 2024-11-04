@@ -8,9 +8,11 @@ services:
     ports:
       - "5432:5432"
     environment:
-#      POSTGRES_DB: Crud_produtos
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 123
+#      POSTGRES_DB: ${PG_DATABASE}
+      POSTGRES_USER: ${PG_USERNAME}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
       PGDATA: /data/postgres
     volumes:
       - ./bancoFiles/postgres:/data/postgres
+    env_file:
+      - ./config/env
